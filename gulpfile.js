@@ -53,7 +53,7 @@ function scripts () {
     .pipe(browserSync.stream())
 }
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/**/*.scss')
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
